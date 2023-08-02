@@ -37,6 +37,20 @@ module.exports = {
       boxShadow: {
         submenu: "-2px 2px 70px -25px rgba(0, 0, 0, 0.3)",
       },
+      keyframes: {
+        "slide-left": {
+          "0%": { opacity: 0, transform: "translateX(100%)" },
+          "100%": { opacity: 1, transform: "translateX(0%)" },
+        },
+        "slide-right": {
+          "0%": { opacity: 1, transform: "translateX(0%)" },
+          "100%": { opacity: 0, transform: "translateX(100%)" },
+        },
+      },
+      animation: {
+        "slide-left": "slide-left 0.5s ease forwards",
+        "slide-right": "slide-right 0.5s ease forwards",
+      },
     },
   },
   plugins: [],
